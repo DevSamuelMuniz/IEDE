@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import logoComNome from "@/assets/imgs/logoComNome.png";
@@ -21,29 +21,35 @@ function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-blue-500 flex flex-col gap-10 justify-center items-center">
+    <main className="min-h-screen bg-blue-600 flex flex-col gap-10 justify-center items-center">
       {/* Logo */}
       <div className="flex justify-center items-center">
-        <Image src={logoComNome} alt="Logo com Nome" width={200} height={100} priority />
+        <Image
+          src={logoComNome}
+          alt="Logo com Nome"
+          width={200}
+          height={100}
+          priority
+        />
       </div>
 
       {/* Botões */}
       <div className="flex flex-col gap-4 w-full px-6 sm:w-2/3 md:w-1/3 mb-32">
         <button
           onClick={redirectSite}
-          className="bg-white rounded py-4 font-semibold text-gray-600 text-lg hover:scale-105 transition-transform duration-200 shadow-md"
+          className="bg-white rounded py-4 font-semibold text-gray-600 text-lg hover:scale-105 transition-transform duration-200 shadow-lg"
         >
           SITE
         </button>
         <button
           onClick={redirectLoja}
-          className="bg-white rounded py-4 font-semibold text-gray-600 text-lg hover:scale-105 transition-transform duration-200 shadow-md"
+          className="bg-white rounded py-4 font-semibold text-gray-600 text-lg hover:scale-105 transition-transform duration-200 shadow-lg"
         >
           LOJA
         </button>
         <button
           onClick={redirectSistema}
-          className="bg-white rounded py-4 font-semibold text-gray-600 text-lg hover:scale-105 transition-transform duration-200 shadow-md"
+          className="bg-white rounded py-4 font-semibold text-gray-600 text-lg hover:scale-105 transition-transform duration-200 shadow-lg"
         >
           SISTEMA DE GESTÃO
         </button>
