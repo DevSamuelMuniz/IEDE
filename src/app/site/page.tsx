@@ -12,6 +12,15 @@ import logoComNome from "@/assets/imgs/logoComNome.png";
 import { ArrowDownward } from "@mui/icons-material";
 
 export default function LandingPage() {
+  
+  const redirectMaps = () => {
+    window.open(
+      "https://www.google.com/maps/@-8.1423032,-34.935823,3a,75y,139.44h,81.7t/data=!3m7!1e1!3m5!1sjY9rxcFk3wMmYGYercfjYQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D8.297538822626109%26panoid%3DjY9rxcFk3wMmYGYercfjYQ%26yaw%3D139.4422439206295!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <main>
       {/* Header */}
@@ -64,9 +73,18 @@ export default function LandingPage() {
             Venha experimentar o poder transformador do Espírito Santo em sua
             vida.
           </p>
-          <button className="mt-6 bg-white text-blue-800 font-semibold py-2 px-6 rounded hover:bg-gray-100 transition-colors">
-            Junte-se a Nós
-          </button>
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              onClick={redirectMaps}
+              className="mt-6 bg-white text-blue-800 font-semibold py-2 px-6 rounded hover:bg-gray-100 transition-colors"
+            >
+              Junte-se a Nós
+            </button>
+          </a>
         </div>
 
         {/* Scroll Down Icon */}
